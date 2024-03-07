@@ -105,7 +105,44 @@ typedef struct
   int size;
 } Stack;
 
-void make_null_stack(Stac){}
+void make_null_stack(Stack *S)
+{
+  S->size = 0;
+}
+
+void push(Stack *S, int x)
+{
+  S->data[S->size] = x;
+  S->size++;
+}
+
+void pop(Stack *S, int x)
+{
+  S->size--;
+}
+
+int top(Stack S)
+{
+  return S.data[S.size - 1];
+}
+
+int empty(Stack S)
+{
+  return S.data[S.size - 1];
+}
+
+// Duyet thoe chieu sau
+void depth_first_search(graph *G)
+{
+  printf("\nDuyen DFS:\n");
+  Stack L;
+  int mark[100];
+  make_null_stack(&L);
+  int i;
+
+  for (i = 1; i <= G->; i++)
+    mark[i] = 0;
+}
 
 int main()
 {
